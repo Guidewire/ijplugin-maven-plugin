@@ -1,7 +1,7 @@
 Maven plugin to package IntelliJ plugins
 ----------------------------------------
 
-This plugin provides a new packaging type, "ijplugin". This packaging is almost the same as
+This plugin provides a new packaging type, "ij-plugin". This packaging is almost the same as
 "jar" packaging, but with both mojo added to default jar lifecycle.
 
 The following mojos are provided by this plugin:

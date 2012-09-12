@@ -2,13 +2,13 @@
   <components>
     <component>
       <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
-      <role-hint>ijplugin</role-hint>
+      <role-hint>ij-plugin</role-hint>
       <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping</implementation>
       <configuration>
         <lifecycles>
           <lifecycle>
             <id>default</id>
-            <!-- START SNIPPET: ijplugin-lifecycle -->
+            <!-- START SNIPPET: ij-plugin-lifecycle -->
             <phases>
               <process-resources>
                 org.apache.maven.plugins:maven-resources-plugin:resources,
@@ -35,7 +35,7 @@
                 org.apache.maven.plugins:maven-deploy-plugin:deploy
               </deploy>
             </phases>
-            <!-- END SNIPPET: ijplugin-lifecycle -->
+            <!-- END SNIPPET: ij-plugin-lifecycle -->
           </lifecycle>
         </lifecycles>
       </configuration>
@@ -43,7 +43,7 @@
 
     <component>
       <role>org.apache.maven.artifact.handler.ArtifactHandler</role>
-      <role-hint>ijplugin</role-hint>
+      <role-hint>ij-plugin</role-hint>
       <implementation>org.apache.maven.artifact.handler.DefaultArtifactHandler</implementation>
       <configuration>
         <type>jar</type>
