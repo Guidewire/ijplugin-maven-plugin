@@ -10,6 +10,11 @@ The following mojos are provided by this plugin:
   (so it is automatically packaged into JAR)
 * package-plugin create .zip file with IntelliJ plugin (packages plugin JAR and dependent JARs into lib/ directory)
 
+ijdeploy.sh
+-----------
+
+Script to automatically deploy IntelliJ SDK JARs to the Nexus.
+
 Building and releasing
 ----------------------
 
