@@ -11,7 +11,8 @@
             <!-- START SNIPPET: ijplugin-lifecycle -->
             <phases>
               <process-resources>
-                org.apache.maven.plugins:maven-resources-plugin:resources
+                org.apache.maven.plugins:maven-resources-plugin:resources,
+                com.guidewire.build:ijplugin-maven-plugin:copy-manifest
               </process-resources>
               <compile>
                 org.apache.maven.plugins:maven-compiler-plugin:compile

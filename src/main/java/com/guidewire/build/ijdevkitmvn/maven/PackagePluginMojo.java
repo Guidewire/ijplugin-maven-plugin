@@ -47,6 +47,9 @@ public class PackagePluginMojo extends AbstractMojo {
   @Parameter
   private String excludeScope;
 
+  @Parameter(defaultValue = "${project.build.directory}/${project.artifactId}")
+  private File content;
+
   @Component(hint = "zip", role = Archiver.class)
   private ZipArchiver zipArchiver;
 
@@ -83,6 +86,7 @@ public class PackagePluginMojo extends AbstractMojo {
         zipArchiver.addFile(lib.getFile(), prefix + lib.getFile().getName());
       }
       zipArchiver.addFile(jar, prefix + jar.getName());
+      zipArchiver.addDirectory(content, project.getArtifactId() + '/');
       zipArchiver.createArchive();
     } catch (IOException e) {
       throw new MojoFailureException("Cannot build plugin archive", e);
