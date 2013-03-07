@@ -11,6 +11,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectHelper;
 
+import java.io.File;
 import java.util.Collections;
 
 /**
@@ -22,7 +23,7 @@ public class ManifestMojo extends AbstractMojo {
   private MavenProject project;
 
   @Parameter(defaultValue = "META-INF/plugin.xml")
-  private String manifestLocation;
+  private File manifestLocation;
 
   @Component(role = MavenProjectHelper.class, hint = "default")
   protected MavenProjectHelper mavenProjectHelper;
@@ -32,8 +33,9 @@ public class ManifestMojo extends AbstractMojo {
     getLog().info("Adding plugin manifest at " + manifestLocation + " as resource");
 
     Resource resource = new Resource();
-    resource.setDirectory(".");
-    resource.setIncludes(Collections.<String>singletonList(manifestLocation));
+    resource.setDirectory(manifestLocation.getParent());
+    resource.setIncludes(Collections.singletonList(manifestLocation.getName()));
+    resource.setTargetPath("META-INF");
     resource.setFiltering(true);
     project.addResource(resource);
   }
