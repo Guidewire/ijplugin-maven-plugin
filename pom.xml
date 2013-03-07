@@ -4,7 +4,7 @@
 
   <groupId>com.guidewire.build</groupId>
   <artifactId>ijplugin-maven-plugin</artifactId>
-  <version>0.2.5</version>
+  <version>0.2.6-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven plugin to package IntelliJ plugins</name>
@@ -73,7 +73,7 @@
   <scm>
     <developerConnection>scm:git:git@gh:build/ijplugin-maven-plugin.git</developerConnection>
     <connection>scm:git://gh/build/ijplugin-maven-plugin</connection>
-    <tag>ijplugin-maven-plugin-0.2.5</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
