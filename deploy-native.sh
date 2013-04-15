@@ -19,9 +19,9 @@ if [ -z "${VERSION}" ] ; then
     exit 1
 fi
 
-TAG="${VERSION/IC-/idea/}"
-git fetch
-git checkout "${TAG}"
+#TAG="${VERSION/IC-/idea/}"
+#git fetch
+#git checkout "${TAG}"
 
 # Create archives with binaries
 for platform in linux mac win ; do
