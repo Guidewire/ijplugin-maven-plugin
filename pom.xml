@@ -73,8 +73,8 @@
   </dependencies>
 
   <scm>
-    <developerConnection>scm:git:git@gh:build/ijplugin-maven-plugin.git</developerConnection>
-    <connection>scm:git://gh/build/ijplugin-maven-plugin</connection>
+    <developerConnection>scm:git:git@github.com:Guidewire/ijplugin-maven-plugin.git</developerConnection>
+    <connection>scm:git:https://github.com/Guidewire/ijplugin-maven-plugin.git</connection>
     <tag>HEAD</tag>
   </scm>
 
